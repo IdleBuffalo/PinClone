@@ -76,4 +76,8 @@ Rails.application.configure do
 
   # Do not dump schema after migrations.
   config.active_record.dump_schema_after_migration = false
+
+  # Required for Heroku / Copied from Devise installation
+  # Note to set this to your actual post - DID it
+  config.action_mailer.default_url_options = { host: 'https://omr-pinclone.herokuapp.com/' }
 end
