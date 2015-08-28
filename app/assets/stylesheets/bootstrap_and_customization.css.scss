@@ -2,8 +2,8 @@
 
 $body-bg: #ecf0f1;
 $font-family: 'Montserrat', sans-serif;
-$navbar-inverse-bg: #fff;
-$navbar-inverse-link-color: #2c3e50;
+$navbar-default-bg: #fff;
+$navbar-default-link-color: #d3d3d3;
 $brand-primary: #c0392b;
 $jumbotron-bg: #fff;
 $navbar-brand: red;
@@ -16,9 +16,8 @@ $navbar-brand: red;
 
 .navbar-brand {
 	font-weight: bold;
-	font-color: red;
 }
 
-.navbar-inverse .navbar-brand {
+.navbar-default .navbar-brand {
     color: #c0392b;
 }
