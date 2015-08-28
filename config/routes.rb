@@ -1,9 +1,14 @@
 Rails.application.routes.draw do
+  root 'pages#home'
+  get 'about' => 'pages#about' # creates about_path
+  
+  # get 'something' => 'pages#about' # is actually something_path that will get lead to pages/about.html.erb 
+
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
   # You can have the root of your site routed with "root"
-  # root 'welcome#index'
+  # root 'pages#home'
 
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'
