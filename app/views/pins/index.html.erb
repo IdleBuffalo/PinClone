@@ -4,14 +4,15 @@
 
 <table>
   <thead>
-    <tr>
+    <tr> 
       <th>Description</th>
       <th colspan="3"></th>
     </tr>
   </thead>
 
   <tbody>
-    <% @pins.each do |pin| %>
+    <% @pins.each do |pin| %> <!-- WE can use @pins because they are defined in pins_controller You will get a 
+    NoMethodError && undefined method-->
       <tr>
         <td><%= pin.description %></td>
         <td><%= link_to 'Show', pin %></td>
