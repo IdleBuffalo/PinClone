@@ -16,6 +16,7 @@
     NoMethodError && undefined method
     this is a loop between do and end. it will do the below things for each pins inside @pins -->
       <tr>
+        <td><%= image_tag pin.image.url(:medium) %></td>
         <td><%= pin.description %></td>
         <td><%= pin.user.email if pin.user %></td>
         <td><%= link_to 'Show', pin %></td> <!-- pin is the same as pin_path -->

@@ -80,4 +80,8 @@ Rails.application.configure do
   # Required for Heroku / Copied from Devise installation
   # Note to set this to your actual post - DID it
   config.action_mailer.default_url_options = { host: 'https://omr-pinclone.herokuapp.com/' }
+
+    # this will hopefully fix the bug for Install Imagemagick identify error
+  Paperclip.options[:image_magick_path] = "/opt/ImageMagick/bin"
+  Paperclip.options[:command_path] = "/opt/ImageMagick/bin"
 end
