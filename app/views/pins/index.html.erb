@@ -6,6 +6,7 @@
   <thead>
     <tr> 
       <th>Description</th>
+      <th>User's email</th>
       <th colspan="3"></th>
     </tr>
   </thead>
@@ -16,9 +17,12 @@
     this is a loop between do and end. it will do the below things for each pins inside @pins -->
       <tr>
         <td><%= pin.description %></td>
+        <td><%= pin.user.email if pin.user %></td>
         <td><%= link_to 'Show', pin %></td> <!-- pin is the same as pin_path -->
+        <% if pin.user == current_user %>
         <td><%= link_to 'Edit', edit_pin_path(pin) %></td>
         <td><%= link_to 'Destroy', pin, method: :delete, data: { confirm: 'Are you sure?' } %></td> <!-- data: je popup -->
+        <% end %>
       </tr>
     <% end %>
   </tbody>
