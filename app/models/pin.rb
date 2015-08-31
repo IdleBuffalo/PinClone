@@ -1,5 +1,10 @@
 class Pin < ActiveRecord::Base
+	# Devise gem
 	belongs_to :user 
+
+	# Paperclip Gem
+	has_attached_file :image, styles: { medium: "300x300>", thumb: "100x100>" }
+
 end
 
 #I've added user_id first by generating a new migration: 
