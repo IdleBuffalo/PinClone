@@ -26,3 +26,7 @@
     </div> <!-- Super important that you close box tukaj, ker drugac je vse misaligned -->
     <% end %>
   </div>
+
+<div class="center">
+  <%= will_paginate @posts, renderer: BootstrapPagination::Rails %>
+</div>

@@ -5,7 +5,7 @@ class PinsController < ApplicationController
 
 
   def index
-    @pins = Pin.all.order("created_at DESC") # goes to the db and gets all the info and saves it to @pins variable
+    @pins = Pin.all.order("created_at ASC").paginate(:page => params[:page], :per_page => 5) # goes to the db and gets all the info and saves it to @pins variable
                     # which we use it later in index.html.erb
   end
 
