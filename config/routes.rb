@@ -2,7 +2,7 @@ Rails.application.routes.draw do
   resources :pins
   
   devise_for :users
-  root 'pages#home'
+  root 'pins#index'
   get 'about' => 'pages#about' # creates about_path
   
   # get 'something' => 'pages#about' # is actually something_path that will get lead to pages/about.html.erb 
