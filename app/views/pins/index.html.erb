@@ -8,10 +8,17 @@
       <p><strong><%= pin.user.email if pin.user %></strong></p>
         <% if pin.user == current_user %>
       <div class="actions">
-        <td><%= link_to 'Edit', edit_pin_path(pin) %>
-        <td><%= link_to 'Destroy', pin, method: :delete, data: { confirm: 'Are you sure?' } %>
+
+        <%= link_to edit_pin_path(pin) do %>
+          <span class="glyphicon glyphicon-edit"></span> Edit
         <% end %>
+
+        <%= link_to pin, method: :delete, data: { confirm: 'Are you sure?' }  do %>
+          <span class="glyphicon glyphicon-trash"></span> Delete
+        <% end %>
+        
       </div>
+      <% end %>
     </div>
   </div> <!-- Super important that you close box tukaj, ker drugac je vse misaligned -->
   <% end %>
