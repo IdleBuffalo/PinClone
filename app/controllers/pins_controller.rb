@@ -5,7 +5,8 @@ class PinsController < ApplicationController
 
 
   def index
-    @pins = Pin.all
+    @pins = Pin.all # goes to the db and gets all the info and saves it to @pins variable
+                    # which we use it later in index.html.erb
   end
 
   def show
